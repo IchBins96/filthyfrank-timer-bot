@@ -2,7 +2,7 @@ const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
-const CHANNEL_ID = '1456966405776736287';
+const CHANNEL_ID = '1456949856873742437';
 const END_DATE = new Date('2026-01-18T00:00:00Z');
 
 let messageId = null;
