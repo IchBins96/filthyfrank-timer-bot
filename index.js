@@ -3,7 +3,7 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 const BOT_TOKEN = process.env.BOT_TOKEN;
 const CHANNEL_ID = '1456949856873742437';
-const END_DATE = new Date('2026-01-18T23:00:00Z');
+const END_DATE = new Date('2026-01-18T17:59:00Z');
 
 let messageId = null;
 
