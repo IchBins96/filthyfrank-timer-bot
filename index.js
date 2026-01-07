@@ -24,13 +24,15 @@ function pad(n) { return n.toString().padStart(2, '0'); }
 
 function createEmbed() {
     const t = getTimeRemaining();
-    const timer = t.ended ? '🏆 **CONTEST ENDED** 🏆' : `**${pad(t.days)} DAYS  |  ${pad(t.hours)} HOURS  |  ${pad(t.mins)} MINS  |  ${pad(t.secs)} SECS**`;
+    const timer = t.ended 
+        ? '🏆 **CONTEST ENDED** 🏆' 
+        : `**${pad(t.days)} DAYS  |  ${pad(t.hours)} HRS  |  ${pad(t.mins)} MIN  |  ${pad(t.secs)} SEC**`;
     return new EmbedBuilder()
         .setTitle('🏆 WinYourSkin Contest 🏆')
         .setDescription('Grind every level and push your high scores to the absolute limit. Every point counts. When the weekly timer hits zero, all highscores across all levels will be combined into one final total.\n\nThe player with the highest overall score claims victory, earns eternal bragging rights, and wins an exclusive personalized skin, custom-designed together with the champion.\n\n**No mercy. No excuses. Clean the leaderboard.** 🔥')
         .addFields({ name: '\u200b', value: timer, inline: false })
         .setColor(0xFC7D00)
-        .setImage('https://cdn.discordapp.com/attachments/1456754946799304756/1456755023563329551/discordlogo.png');
+        .setImage('https://cdn.discordapp.com/attachments/1456754946799304756/1457136694892564571/ffpodest.png');
 }
 
 async function updateTimer() {
@@ -44,5 +46,5 @@ async function updateTimer() {
     } catch (e) { console.error(e); }
 }
 
-client.once('ready', () => { console.log('Bot online'); updateTimer(); setInterval(updateTimer, 60000); });
+client.once('ready', () => { console.log('Bot online'); updateTimer(); setInterval(updateTimer, 5000); });
 client.login(BOT_TOKEN);
