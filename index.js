@@ -26,7 +26,7 @@ function createEmbed() {
     const t = getTimeRemaining();
     const timer = t.ended 
         ? '# 🏆 CONTEST ENDED 🏆' 
-        : `# ${pad(t.days)} DAYS  |  ${pad(t.hours)} HRS  |  ${pad(t.mins)} MIN  |  ${pad(t.secs)} SEC`;
+        : `# \`${pad(t.days)}\` DAYS  |  \`${pad(t.hours)}\` HRS  |  \`${pad(t.mins)}\` MIN  |  \`${pad(t.secs)}\` SEC`;
     return new EmbedBuilder()
         .setTitle('🏆 WinYourSkin Contest 🏆')
         .setDescription('Grind every level and push your high scores to the absolute limit. Every point counts. When the weekly timer hits zero, all highscores across all levels will be combined into one final total.\n\nThe player with the highest overall score claims victory, earns eternal bragging rights, and wins an exclusive personalized skin, custom-designed together with the champion.\n\n**No mercy. No excuses. Clean the leaderboard.** 🔥\n\n' + timer)
